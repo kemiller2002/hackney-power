@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sell a Generator | Hackney Power</title>
+  <meta name="description" content="Submit generator details to connect with qualified buyers." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span>Hackney Power</span></a>
+        <nav class="navlinks" aria-label="Primary">
+          <a data-nav href="buy.html">Buy</a>
+          <a data-nav href="sell.html">Sell</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <div class="ctaRow">
+          <a class="btn" href="tel:+13174088501">Call (317) 408-8501</a>
+          <a class="btn primary" href="buy.html">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h2>Sell a Generator</h2>
+      <p>Submit your unit details. We’ll follow up and help connect you with active buyers.</p>
+
+      <div class="split">
+        <div class="card pad">
+          <form class="form" name="sell-unit" method="POST" data-netlify="true" enctype="multipart/form-data" action="thanks.html">
+            <input type="hidden" name="form-name" value="sell-unit" />
+
+            <div class="formRow">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label for="location">Unit location (city/state)</label>
+                <input id="location" name="unit_location" placeholder="e.g., Mobile, AL" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="make">Make</label>
+                <input id="make" name="make" placeholder="e.g., Cummins" />
+              </div>
+              <div class="field">
+                <label for="model">Model</label>
+                <input id="model" name="model" placeholder="e.g., DQCA" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="kw">kW</label>
+                <input id="kw" name="kw" placeholder="e.g., 500" />
+              </div>
+              <div class="field">
+                <label for="fuel">Fuel type</label>
+                <select id="fuel" name="fuel_type">
+                  <option value="" selected>Not sure</option>
+                  <option>Diesel</option>
+                  <option>Natural Gas</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="hours">Hours (if known)</label>
+                <input id="hours" name="hours" placeholder="e.g., 1,250" />
+              </div>
+              <div class="field">
+                <label for="enclosure">Enclosure</label>
+                <select id="enclosure" name="enclosure">
+                  <option value="" selected>Not sure</option>
+                  <option>Open</option>
+                  <option>Enclosed</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="condition">Condition / Notes</label>
+              <textarea id="condition" name="condition" placeholder="Any known issues, maintenance history, load bank test info, etc."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="photos">Photos (optional)</label>
+              <input id="photos" name="photos" type="file" multiple />
+              <div class="help">If you deploy on Netlify, file uploads work. If not, use email via the Contact page.</div>
+            </div>
+
+            <button class="btn secondary" type="submit">Submit Unit</button>
+          </form>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin:0 0 8px;">Helpful details</h2>
+          <ul class="small" style="margin:0; padding-left:18px;">
+            <li>Make, model, kW</li>
+            <li>Hours and fuel type</li>
+            <li>Unit location</li>
+            <li>Photos of nameplate and overall unit</li>
+            <li>Any testing or service records</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="small" style="margin:0;">
+            Prefer a quick call? <a href="tel:+13174088501">Call (317) 408-8501</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footerGrid">
+        <div><strong>Hackney Power</strong><br />Broker of new, used, and surplus diesel and natural gas generators and engines.</div>
+        <div><a href="tel:+13174088501">Call (317) 408-8501</a><br /><a href="contact.html">Email / Contact</a></div>
+        <div class="small">© <span id="y"></span> Hackney Power. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
