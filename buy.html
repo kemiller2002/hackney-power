@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request a Quote | Hackney Power</title>
+  <meta name="description" content="Request pricing and availability for diesel and natural gas generators." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span>Hackney Power</span></a>
+        <nav class="navlinks" aria-label="Primary">
+          <a data-nav href="buy.html">Buy</a>
+          <a data-nav href="sell.html">Sell</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <div class="ctaRow">
+          <a class="btn" href="tel:+13174088501">Call (317) 408-8501</a>
+          <a class="btn secondary" href="sell.html">Sell a Unit</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h2>Request a Quote</h2>
+      <p>Share your requirements. The more detail you provide, the faster we can match available equipment.</p>
+
+      <div class="split">
+        <div class="card pad">
+          <form class="form" name="quote-request" method="POST" data-netlify="true" action="thanks.html">
+            <input type="hidden" name="form-name" value="quote-request" />
+
+            <div class="formRow">
+              <div class="field">
+                <label for="first">First name</label>
+                <input id="first" name="first_name" autocomplete="given-name" required />
+              </div>
+              <div class="field">
+                <label for="last">Last name</label>
+                <input id="last" name="last_name" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="fuel">Fuel type</label>
+                <select id="fuel" name="fuel_type" required>
+                  <option value="" selected disabled>Select</option>
+                  <option>Diesel</option>
+                  <option>Natural Gas</option>
+                  <option>Either</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="kw">kW range</label>
+                <input id="kw" name="kw_range" placeholder="e.g., 150–250 kW" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="phase">Phase</label>
+                <select id="phase" name="phase">
+                  <option value="" selected>Not sure</option>
+                  <option>Single-phase</option>
+                  <option>Three-phase</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="voltage">Voltage</label>
+                <input id="voltage" name="voltage" placeholder="e.g., 480V" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="enclosure">Enclosure</label>
+                <select id="enclosure" name="enclosure">
+                  <option value="" selected>Not sure</option>
+                  <option>Open</option>
+                  <option>Enclosed</option>
+                  <option>Either</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="timeline">Timeline</label>
+                <input id="timeline" name="timeline" placeholder="e.g., ASAP / 2 weeks / 60 days" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="location">Delivery location (city/state)</label>
+              <input id="location" name="delivery_location" placeholder="e.g., Indianapolis, IN" />
+            </div>
+
+            <div class="field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" placeholder="Application (standby/prime), preferred brands, hours, budget range, etc."></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Send Request</button>
+            <div class="help">Prefer to talk? Call <a href="tel:+13174088501">(317) 408-8501</a>.</div>
+          </form>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin:0 0 8px;">What helps most</h2>
+          <ul class="small" style="margin:0; padding-left:18px;">
+            <li>kW range and fuel type</li>
+            <li>Voltage/phase (if known)</li>
+            <li>Open vs enclosed</li>
+            <li>Delivery location and timeline</li>
+            <li>Any brand or hours preference</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="small" style="margin:0;">
+            If you’re not sure on specs, send what you know. We can help you narrow it down.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footerGrid">
+        <div><strong>Hackney Power</strong><br />Broker of new, used, and surplus diesel and natural gas generators and engines.</div>
+        <div><a href="tel:+13174088501">Call (317) 408-8501</a><br /><a href="contact.html">Email / Contact</a></div>
+        <div class="small">© <span id="y"></span> Hackney Power. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
