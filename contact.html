@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Hackney Power</title>
+  <meta name="description" content="Contact Hackney Power for generator sourcing or to sell equipment." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span>Hackney Power</span></a>
+        <nav class="navlinks" aria-label="Primary">
+          <a data-nav href="buy.html">Buy</a>
+          <a data-nav href="sell.html">Sell</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <div class="ctaRow">
+          <a class="btn" href="tel:+13174088501">Call (317) 408-8501</a>
+          <a class="btn primary" href="buy.html">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Call us or send a message. We respond as quickly as possible.</p>
+
+      <div class="split">
+        <div class="card pad">
+          <div class="callout" style="margin-bottom:12px;">
+            <strong>Phone:</strong> <a class="btn" href="tel:+13174088501">(317) 408-8501</a>
+            <a class="btn" href="#" data-copy-phone>Copy</a>
+          </div>
+
+          <form class="form" name="contact" method="POST" data-netlify="true" action="thanks.html">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="formRow">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="" selected disabled>Select</option>
+                <option>Buy a generator</option>
+                <option>Sell a generator</option>
+                <option>Engines / parts</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Send Message</button>
+
+            <div class="help">
+              If forms don’t work on your host, email us using:
+              <a href="mailto:info@hackneypower.com?subject=Hackney%20Power%20Inquiry">info@hackneypower.com</a>
+              (update this address if you use a different one).
+            </div>
+          </form>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin:0 0 8px;">Fastest way to get help</h2>
+          <p class="small">If you call, have these ready:</p>
+          <ul class="small" style="margin:0; padding-left:18px;">
+            <li>Fuel type and kW range</li>
+            <li>Voltage/phase (if known)</li>
+            <li>Location and timeline</li>
+            <li>Open vs enclosed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footerGrid">
+        <div><strong>Hackney Power</strong><br />Broker of new, used, and surplus diesel and natural gas generators and engines.</div>
+        <div><a href="tel:+13174088501">Call (317) 408-8501</a><br /><a href="contact.html">Email / Contact</a></div>
+        <div class="small">© <span id="y"></span> Hackney Power. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
